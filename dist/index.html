@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#faf9f6">
+  <title>饭点 · 让每一顿，都值得期待</title>
+  <meta name="description" content="专属校园的食堂吃饭指南。发现同学私藏好菜，按预算与口味选饭，查看近期点评与避雷情报。">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css?v=20261024-2">
+  <script src="data.js?v=20261024-2" defer></script><script src="app.js?v=20261024-2" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="#discover" aria-label="饭点首页"><span class="brand-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M7 19h26c0 9-5 14-13 14S7 28 7 19Z" fill="currentColor"/><path d="M12 9c-3 3 3 3 0 6m8-8c-3 3 3 3 0 6m8-4c-3 3 3 3 0 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M14 35h12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span><span>饭点<span class="brand-en">FAN DIAN</span></span></a>
+    <nav class="desktop-nav" aria-label="主导航"><a href="#discover" data-nav="discover">发现好菜</a><a href="#map" data-nav="map">食堂地图</a><a href="#radar" data-nav="radar">避雷情报<span class="nav-dot"></span></a><a href="#saved" data-nav="saved">我的收藏</a></nav>
+    <div class="header-actions"><button class="campus-button" id="campusButton"><span data-icon="pin"></span><span>华江大学</span><span class="demo-small">演示</span></button><button class="primary write-button" data-action="write"><span data-icon="edit"></span><span>写点评</span></button></div>
+  </div></header>
+  <main id="mainContent">
+    <section class="hero" id="hero">
+      <div class="hero-copy"><div class="eyebrow"><span class="tiny-sun">✳</span> 你的校园美食指南</div><h1>今天这顿，<br>吃点<span class="underline-word">好的。</span></h1><p>同学亲测的好味道，都在这里。<br class="desktop-br">按预算找菜、按窗口逛，下一顿少踩雷。</p><div class="hero-actions"><button class="primary hero-cta" data-action="recommend"><span data-icon="shuffle"></span>帮我选一顿<span data-icon="arrow"></span></button><button class="hero-secondary" data-action="browse-windows">逛逛食堂窗口 <span data-icon="arrowUp"></span></button></div><div class="social-proof"><div class="avatar-stack"><span>林</span><span>陈</span><span>周</span><span>何</span></div><span><strong>校园好味道</strong>，同学一起发现</span></div></div>
+      <div class="hero-art" aria-label="校园美食推荐"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="hero-spark spark-one">✦</span><span class="hero-spark spark-two">✧</span><div class="hero-photo"><img src="assets/dish-5.jpg" alt="炭烤鸡腿饭，菜品示意图" fetchpriority="high"><span class="photo-caption">GOOD FOOD. GOOD MOOD.</span></div><div class="hero-sticker"><span>同学们说</span><strong>这家可以！</strong><span>CAMPUS FAVORITES</span></div><button class="floating-pick" data-action="detail" data-id="5"><img class="floating-food" src="assets/dish-5.jpg" alt="炭烤鸡腿饭菜品示意"><span><small>不踩雷的一顿</small><strong>炭烤鸡腿饭 <i>★ 4.8</i></strong></span><span data-icon="arrow"></span></button></div>
+    </section>
+    <section class="explore" id="explore"><div class="section-top"><div><div class="section-kicker">THE CAMPUS FOOD GUIDE</div><h2 id="pageTitle">同学们都在吃什么？</h2><p id="pageSubtitle">从一道好菜，找到你喜欢的食堂窗口。<span class="muted">当前为演示内容</span></p></div><div class="search-wrap"><span data-icon="search"></span><input type="search" id="searchInput" placeholder="搜菜品、食堂、口味…" aria-label="搜索菜品、食堂、口味"><kbd>/</kbd></div></div>
+      <div id="discoverControls"><div class="canteen-tabs" id="canteenTabs" aria-label="食堂筛选"></div><div class="filter-row"><div class="quick-filters" id="quickFilters"></div><button class="filter-button" data-action="filters"><span data-icon="sliders"></span>更多筛选<span id="filterCount"></span></button></div></div>
+      <div class="content-layout" id="contentLayout"><div><div class="browse-row"><div id="browseSwitch" class="browse-switch" aria-label="浏览方式"></div><span class="browse-note">一间食堂，总有一口你喜欢</span></div><div class="results-bar"><span id="resultsLabel" aria-live="polite"></span><div class="sort-wrap"><label for="sortSelect">排序</label><select id="sortSelect"><option value="recommended">综合推荐</option><option value="rating">评分最高</option><option value="price">价格最低</option><option value="wait">排队最短</option></select></div></div><div id="dishGrid" class="dish-grid"></div><div id="loadMoreWrap" class="load-more-wrap"></div></div><aside id="sidebar"></aside></div>
+      <div id="otherView" hidden></div>
+    </section>
+    <section class="community-banner"><div class="community-icon" data-icon="chat"></div><div><h3>你的一句话，就是下一位同学的吃饭指南。</h3><p>好吃的值得被发现，踩过的雷也值得被听见。</p></div><button class="outline" data-action="write">分享我的这一顿<span data-icon="arrow"></span></button></section>
+  </main>
+  <footer><div class="footer-brand">饭点<span>让每一顿，都值得期待。</span></div><div>华江大学为虚构演示校园 · 图片为菜品示意<button id="aboutButton">数据与产品说明<span data-icon="arrowUp"></span></button></div></footer>
+  <nav class="mobile-nav" aria-label="移动导航"><a href="#discover" data-nav="discover"><span data-icon="compass"></span>发现</a><a href="#map" data-nav="map"><span data-icon="map"></span>食堂</a><a href="#radar" data-nav="radar"><span data-icon="radar"></span>避雷</a><a href="#saved" data-nav="saved"><span data-icon="heart"></span>收藏</a></nav>
+  <dialog id="appDialog" aria-labelledby="dialogTitle"><button class="dialog-close" aria-label="关闭弹窗" data-action="close"><span data-icon="x"></span></button><div id="dialogContent"></div><div id="dialogToast" class="dialog-toast" role="status" aria-live="polite" hidden></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>
